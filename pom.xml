@@ -8,7 +8,7 @@
         <!-- Version of the artifactt-->
         <version>1.0-SNAPSHOT</version>
         <!-- Defines the package (jar/war/ear)-->
-        <packaging>jar</packaging>
+        <packaging>war</packaging>
  
         <!-- Project Name-->
         <name>Maven-Web-Project</name>
