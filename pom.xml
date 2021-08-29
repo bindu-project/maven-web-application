@@ -100,7 +100,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.232.190.226:8081/repository/walmart-release/</url>
+	      <url>http://13.232.190.226:8081/repository/walmart-snapshot//</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
