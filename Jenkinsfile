@@ -2,7 +2,7 @@ node {
     def MavenHome = tool name: "Maven 3.8.2"
     stage('CheckOutCode')
     {
-        git branch: 'development', credentialsId: '8a275ea2-210c-4c7d-a3e4-34d9a9c605ad', url: 'https://github.com/bindu-project/maven-web-application.git'
+        git branch: 'master', credentialsId: '8a275ea2-210c-4c7d-a3e4-34d9a9c605ad', url: 'https://github.com/bindu-project/maven-web-application.git'
     }
     stage('Build')
     {
@@ -19,7 +19,7 @@ node {
     stage('DeployApplicationIntoTomcat')
     {
     sshagent(['ec89cf6c-1a82-42ca-8708-3cf5a34a2cff']) {
-        sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.108.66.62:/opt/apache-tomcat-9.0.52/webapps/"
+        sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.130.53:/opt/apache-tomcat-9.0.52/webapps/"
     }
     }
     stage('SendEmail'){
